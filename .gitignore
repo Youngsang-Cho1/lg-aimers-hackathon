@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+
+# Local dry-run inputs/outputs are added by the evaluation server.
+submission/data/
+submission/output/
+
+# Temporary smoke-test artifact.
+submission/model/artifact_smoke.pkl
