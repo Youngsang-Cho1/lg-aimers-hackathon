@@ -1,5 +1,9 @@
 __pycache__/
 *.py[cod]
+.DS_Store
+
+# Official competition data lives outside the submitted code package.
+open/
 
 # Local dry-run inputs/outputs are added by the evaluation server.
 submission/data/
