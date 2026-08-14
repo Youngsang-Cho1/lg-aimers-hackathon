@@ -264,13 +264,6 @@ def main():
     if rf_preds is None:
         preds = custom_preds
     else:
-        rf_preds = apply_probability_calibration_with(
-            rf_preds,
-            artifact["rf_prob_calibrator"],
-            artifact["clip_min"],
-            artifact["clip_max"],
-        )
-        rf_preds = apply_future_calibration(rf_preds, test["season"].to_numpy(), artifact)
         rf_weight = float(artifact.get("ensemble_weight", 0.85))
         preds = rf_weight * rf_preds + (1.0 - rf_weight) * custom_preds
         preds = np.clip(preds, 0.0, 1.0)

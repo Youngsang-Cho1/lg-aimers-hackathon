@@ -325,11 +325,11 @@ def prepare_train_features(df, prior=None):
         "bias": None,
         "prob_calibrator": {"type": "identity", "slope": 1.0, "intercept": 0.0},
         "rf_prob_calibrator": {
-            "type": "platt",
-            "slope": 1.0832335020976482,
-            "intercept": -0.0611618416230724,
+            "type": "identity",
+            "slope": 1.0,
+            "intercept": 0.0,
         },
-        "ensemble_weight": 1.0,
+        "ensemble_weight": 0.85,
         "clip_min": 0.02,
         "clip_max": 0.98,
     }
